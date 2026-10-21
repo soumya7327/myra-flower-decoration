@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import { Menu, X } from 'lucide-react'
+import { Download, Menu, X } from 'lucide-react'
 import BrandLogo from './BrandLogo.jsx'
 
 const links = [
@@ -52,6 +52,15 @@ function SiteHeader() {
               {link.label}
             </a>
           ))}
+          <a
+            className="header-catalogue"
+            href="/catalogue/myra-catalogue.pdf"
+            download="MYRA-Flower-Decoration-Catalogue.pdf"
+            onClick={closeMenu}
+          >
+            <Download size={15} aria-hidden="true" />
+            Download Catalogue
+          </a>
           <a className="header-contact" href="/#contact" onClick={closeMenu}>
             Get in touch <span aria-hidden="true">↗</span>
           </a>
